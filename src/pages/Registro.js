@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 
-function Login() {
-  const [email, setEmail] = useState('');
+function Registro() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const validateEmail = (email) => {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  };
-
-  const handleSubmit = async (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
 
-    if (!validateEmail(email)) {
-      setError('Por favor ingrese un email válido.');
+    if (username.length < 3) {
+      setError('El nombre de usuario debe tener al menos 3 caracteres.');
       return;
     }
 
@@ -29,32 +24,32 @@ function Login() {
       const response = await fetch('URL_DEL_BACKEND', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
 
       if (data.success) {
-        alert('Login exitoso');
+        alert('Registro exitoso');
       } else {
-        setError('Credenciales incorrectas');
+        setError('Error en el registro');
       }
     } catch (error) {
-      console.error('Error en la autenticación:', error);
+      console.error('Error en el registro:', error);
       setError('Hubo un error en el servidor. Intente nuevamente.');
     }
   };
 
   return (
-    <div className="login-page">
-      <h1>Iniciar Sesión</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="registro-page">
+      <h1>Registro</h1>
+      <form onSubmit={handleRegister}>
         <div className="input-group">
-          <label>Email:</label>
+          <label>Usuario:</label>
           <input 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
+            type="text" 
+            value={username} 
+            onChange={(e) => setUsername(e.target.value)} 
             required 
           />
         </div>
@@ -68,10 +63,10 @@ function Login() {
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit" className="login-button">Acceder</button>
+        <button type="submit" className="registro-button">Registrarse</button>
       </form>
     </div>
   );
 }
 
-export default Login;
+export default Registro;
