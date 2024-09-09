@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Login.css';
+import '../styles/Register.css';
 
 import Logo from '../images/Logo.svg';
 import EduLibre from '../images/EduLibre.svg';
@@ -17,7 +17,7 @@ const Header = () => (
   </header>
 );
 
-function Login() {
+function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -53,24 +53,24 @@ function Login() {
       const data = await response.json();
 
       if (data.success) {
-        alert('Login exitoso');
+        alert('Registro exitoso');
       } else {
-        setError('Credenciales incorrectas');
+        setError('Error en el registro');
       }
     } catch (error) {
-      console.error('Error en la autenticación:', error);
+      console.error('Error en el registro:', error);
       setError('Hubo un error en el servidor. Intente nuevamente.');
     }
   };
 
-  const handleRegisterRedirect = () => {
-    navigate('/register');
+  const handleLoginRedirect = () => {
+    navigate('/login');
   };
 
   return (
-    <div className="login-page">
+    <div className="register-page">
       <Header />
-      <h1>Ya está aprendiendo con nosotros?</h1>
+      <h1>Regístrese para comenzar a aprender</h1>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <label>Usuario:</label>
@@ -91,23 +91,23 @@ function Login() {
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit" className="login-button">Continue aquí</button>
+        <button type="submit" className="register-button">Regístrese aquí</button>
       </form>
       <div className="social-login">
         <button className="google-button">
           <img src={GoogleLogo} alt="Google Logo" className="social-logo" />
-          Acceder con Google
+          Registrarse con Google
         </button>
         <button className="facebook-button">
           <img src={FacebookLogo} alt="Facebook Logo" className="social-logo" />
-          Acceder con Facebook
+          Registrarse con Facebook
         </button>
       </div>
-      <p className="register-link">
-        ¿Aún no tiene cuenta? <span onClick={handleRegisterRedirect} className="register-button">Regístrese aquí</span>
+      <p className="login-link">
+        ¿Ya tiene cuenta? <span onClick={handleLoginRedirect} className="login-link-text">Iniciar Sesión</span>
       </p>
     </div>
   );
 }
 
-export default Login;
+export default Register;

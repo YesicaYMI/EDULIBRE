@@ -5,7 +5,8 @@ import './App.css'; // Estilos de la página
 // Importamos los componentes
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Registro from './pages/Registro';
+import Registro from './pages/Register';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/registro" element={<Registro />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </Router>
