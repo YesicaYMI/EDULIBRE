@@ -1,0 +1,47 @@
+.login-page {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login-page h1 {
+  font-size: 2.5rem;
+  color: #00A9FF; /* Color de la gama del logo */
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #FF6F61; /* Color de la gama del logo */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-button {
+  background-color: #00A9FF; /* Azul del logo */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #FF6F61; /* Rosa del logo */
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
