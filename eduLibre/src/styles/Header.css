@@ -1,0 +1,21 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container .Logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-container .Logo:last-child {
+    margin-right: 0;
+}

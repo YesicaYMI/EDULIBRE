@@ -1,18 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../images/Logo.svg';
-import EduLibre from '../images/EduLibre.svg';
+import { Link} from 'react-router-dom';
 import Emojis from '../images/Emojis.svg';
-import '../styles/Home.css'; // Asegúrate de tener un archivo CSS para los estilos
-
-const Header = () => (
-  <header className="header">
-    <div className="logo-container">
-      <img src={Logo} alt="Logo" className="Logo" />
-      <img src={EduLibre} alt="Letra del logo" className="Logo" />
-    </div>
-  </header>
-);
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import '../styles/Home.css'
 
 const HeroSection = () => (
   <section className="hero-section">
@@ -27,6 +18,7 @@ const HeroSection = () => (
     </div>
   </section>
 );
+
 
 const BenefitsSection = () => (
   <section className="benefits-section">
@@ -43,12 +35,6 @@ const BenefitsSection = () => (
       <p>Prepárate para obtener tu título de bachiller con nuestros recursos.</p>
     </div>
   </section>
-);
-
-const Footer = () => (
-  <footer className="footer">
-    <p>© 2024 EduLibre. Todos los derechos reservados.</p>
-  </footer>
 );
 
 const Home = () => (

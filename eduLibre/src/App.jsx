@@ -1,22 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'; // Estilos de la página
-
-// Importamos los componentes
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import SelectionMenu from './components/SelectionMenu';
+import MateriasMenu from './components/MateriasMenu';
+import GradosMenu from './components/GradosMenu';
+
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </div>
-  );
-}
 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/selection" element={<SelectionMenu />} />
+          <Route path="/materias" element={<MateriasMenu />} />
+          <Route path="/grados" element={<GradosMenu />} />
+
+        </Routes>  
+  )
+}
 export default App;
