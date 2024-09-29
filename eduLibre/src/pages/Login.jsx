@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LogoLogin from '../images/LogoLogin.svg';
+import '../styles/Login.css';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -74,31 +75,33 @@ function Login() {
             <h1>¿Ya está aprendiendo con nosotros?</h1>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
-                    <label>Usuario:</label>
-                    <input 
-                        type="text" 
-                        value={username} 
-                        onChange={(e) => setUsername(e.target.value)} 
-                        required 
+                    <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Usuario"
+                        required
                     />
                 </div>
                 <div className="input-group">
-                    <label>Contraseña:</label>
-                    <input 
-                        type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        required 
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Contraseña"
+                        required
                     />
                 </div>
                 <button type="submit" className="login-button">Continue aquí</button>
             </form>
             <p className="register-link">
-                ¿Aún no tiene cuenta? <span onClick={handleRegisterRedirect} className="register-button">Regístrese aquí</span>
+                ¿Aún no tiene cuenta?{' '}
+                <span onClick={handleRegisterRedirect} className="register-button">
+                    Regístrese aquí
+                </span>
             </p>
-            <Footer/>
+            {/* Footer eliminado */}
         </div>
-
     );
 }
 
