@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
-import Footer from './Footer';// Asegúrate de tener los estilos necesarios
+import Footer from './Footer';
+import '../styles/MateriasMenu.css';
 
 function MateriasMenu() {
   const navigate = useNavigate();
@@ -43,7 +44,6 @@ function MateriasMenu() {
                 <button onClick={handleInglesClick} className="option-button">Inglés</button>
             </div>
         </div>
-        <Footer />
     </>
 
   );

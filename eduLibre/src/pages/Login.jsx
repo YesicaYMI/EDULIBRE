@@ -100,7 +100,7 @@ function Login() {
                     Regístrese aquí
                 </span>
             </p>
-            {/* Footer eliminado */}
+            {}
         </div>
     );
 }

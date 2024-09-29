@@ -1,32 +1,37 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../components/Header';
+import '../styles/SelectionMenu.css';
 
-function SelectionMenu() {
-  const navigate = useNavigate();
+function Metodo() {
+    const navigate = useNavigate();
 
-  const handleMateriasClick = () => {
-    navigate('/materias');
-  };
+    const handleMateriasClick = () => {
+        navigate('/materias');
+    };
 
-  const handleGradosClick = () => {
-    navigate('/grados');
-  };
+    const handleGradosClick = () => {
+        navigate('/grados');
+    };
 
-  return (
-    <>
-      <Header />
-      <div className="selection-menu">
-        <h1>Vamos a escoger</h1>
-        <div className="options">
-          <button onClick={handleMateriasClick} className="option-button">Por Materias</button>
-          <button onClick={handleGradosClick} className="option-button">Por Grados</button>
+    return (
+        <div className="metodo-page">
+            <Header />
+            <h1>Vamos a escoger</h1>
+            <div className="options-container">
+                <div className="option-card" onClick={handleMateriasClick}>
+                    <h2>Por Materias</h2>
+                </div>
+                <div className="option-card" onClick={handleGradosClick}>
+                    <h2>Por grados</h2>
+                </div>
+            </div>
+            <div className="buttons-container">
+                <button className="continue-button" onClick={handleMateriasClick}>Continue aquí</button>
+                <button className="continue-button" onClick={handleGradosClick}>Continue aquí</button>
+            </div>
         </div>
-      </div>
-      <Footer/>
-    </>
-  );
+    );
 }
 
-export default SelectionMenu;
+export default Metodo;
