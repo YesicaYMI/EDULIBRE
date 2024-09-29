@@ -69,6 +69,7 @@ function Login() {
     };
 
     return (
+        <>
         <div className="login-page">
             <Header />
             <img src={LogoLogin} alt="Emojis" className="Emojis" />
@@ -102,6 +103,8 @@ function Login() {
             </p>
             {}
         </div>
+        <Footer/>
+        </>
     );
 }
 

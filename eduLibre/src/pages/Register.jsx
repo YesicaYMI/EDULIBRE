@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
-import Logo from '../images/Logo.svg';
-import EduLibre from '../images/EduLibre.svg';
-
-const Header = () => (
-  <header className="header">
-    <div className="logo-container">
-      <img src={Logo} alt="Logo" className="Logo" />
-      <img src={EduLibre} alt="Letra del logo" className="Logo" />
-    </div>
-  </header>
-);
 
 function Register() {
   const [cedula, setCedula] = useState('');
@@ -107,6 +98,7 @@ function Register() {
   };
 
   return (
+    <>
     <div className="register-page">
       <Header />
       <h1>Regístrese para comenzar a aprender</h1>
@@ -144,6 +136,8 @@ function Register() {
         ¿Ya tiene cuenta? <span onClick={handleLoginRedirect} className="login-link-text">Iniciar Sesión</span>
       </p>
     </div>
+    <Footer/>
+    </>
   );
 }
 
