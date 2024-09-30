@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .register-page {
     display: flex;
     flex-direction: column;
@@ -56,4 +57,88 @@ button {
 button[type="submit"]:hover,
 button:hover {
     background-color: #0056b3;
+=======
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.header img {
+    margin-right: 0.5rem;
+}
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #098131;
+}
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.form-section .form {
+    margin-right: 4rem;
+}
+.form-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.form-section button {
+    display: block;
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.form-section .form input {
+    display: block;
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    border: 1px solid #C6F6D5;
+}
+.form-section .form input[type="submit"] {
+    background-color: #098131;
+    color: white;
+    margin-top: 1.5rem;
+}
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.icons img {
+    width: 50px;
+    height: 50px;
+}
+.footer {
+    margin-top: 2rem;
+}
+.footer p {
+    margin-bottom: 0.5rem;
+}
+.footer button {
+    background-color: #098131;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+>>>>>>> Stashed changes
 }
