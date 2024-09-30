@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Emojis from '../images/Emojis.svg';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '../styles/Home.css'
-
+import '../styles/Home.css';
 
 const HeroSection = () => (
-  
   <section className="hero-section">
     <div className="hero-content">
-    <h1 className="header-title">EduLibre</h1>
       <img src={Emojis} alt="Emojis" className="Emojis" />
       <div className="hero-text">
         <p>Completa tu bachillerato de forma divertida, efectiva y sin costo.</p>
@@ -21,7 +18,6 @@ const HeroSection = () => (
     </div>
   </section>
 );
-
 
 const BenefitsSection = () => (
   <section className="benefits-section">
