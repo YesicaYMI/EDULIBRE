@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import bcrypt from 'bcryptjs';
 
 function Register() {
   const [cedula, setCedula] = useState('');
@@ -67,7 +68,7 @@ function Register() {
       const response = await fetch('URL_DEL_BACKEND', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cedula, nombre, email, contraseñaHash: hashedPassword, rol}),
+        body: JSON.stringify({ cedula, nombre, email, contraseñaHash: hashedPassword, rol }),
       });
 
       const data = await response.json();
@@ -101,33 +102,6 @@ function Register() {
     navigate('/login');
   };
 
-  const iconSources = [
-    {
-        src: 'https://img.freepik.com/vector-premium/100-o-dia-escuela-dibujos-animados-color-clipart_576561-6416.jpg',
-        alt: 'School building icon'
-    },
-    {
-        src: 'https://us.123rf.com/450wm/kuklamalvina/kuklamalvina2403/kuklamalvina240300142/230105802-libro-antiguo-abierto-con-marcador-y-hojas-de-papel-rayadas-vac%C3%ADas.jpg?ver=6',
-        alt: 'Open book icon'
-    },
-    {
-        src: 'https://i.pinimg.com/736x/66/16/41/661641025b358aff6dbdbb72b086af67.jpg',
-        alt: 'Smartphone icon'
-    },
-    {
-        src: 'https://us.123rf.com/450wm/platypusmi86/platypusmi861806/platypusmi86180601201/115499411-colorido-bloc-de-notas-abierto-en-espiral-con-marcadores-limpie-la-p%C3%A1gina-y-c%C3%BAbrala-con-pegatinas.jpg?ver=6',
-        alt: 'Notebook icon'
-    },
-    {
-        src: 'https://www.shutterstock.com/image-vector/gorro-gorra-o-birrete-de-600nw-1909825534.jpg',
-        alt: 'Graduation cap icon'
-    },
-    {
-        src: 'https://i.pinimg.com/736x/e7/7d/93/e77d934bdb53572b7a3f8da4e95b1a4f.jpg',
-        alt: 'Backpack icon'
-    }
-];
-
   return (
     <>
       <div className="register-page">
@@ -140,8 +114,9 @@ function Register() {
               type="text" 
               value={cedula} 
               onChange={(e) => setCedula(e.target.value)} 
+              placeholder="Ingrese su cédula" 
               required 
-            />
+            />           
           </div>
           <div className="input-group">
             <label>Nombre:</label>
@@ -149,6 +124,7 @@ function Register() {
               type="text" 
               value={nombre} 
               onChange={(e) => setNombre(e.target.value)} 
+              placeholder="Ingrese su nombre" 
               required 
             />
           </div>
@@ -158,6 +134,7 @@ function Register() {
               type="email" 
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
+              placeholder="Ingrese su correo electrónico" 
               required 
             />
           </div>
@@ -167,6 +144,7 @@ function Register() {
               type="number" 
               value={edad} 
               onChange={(e) => setEdad(e.target.value)} 
+              placeholder="Ingrese su edad" 
               required 
             />
           </div>
@@ -176,6 +154,7 @@ function Register() {
               type="password" 
               value={password} 
               onChange={(e) => setPassword(e.target.value)} 
+              placeholder="Ingrese su contraseña"
               required 
             />
           </div>
