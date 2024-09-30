@@ -39,6 +39,7 @@ const BenefitsSection = () => (
 const Home = () => (
   <div>
     <Header />
+    <h1 className="header-title">EduLibre</h1> {/* Asegúrate de que este título esté incluido */}
     <HeroSection />
     <BenefitsSection />
     <Footer />

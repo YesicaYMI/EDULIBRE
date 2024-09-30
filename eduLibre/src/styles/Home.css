@@ -9,18 +9,6 @@ body, html {
     color: #333; /* Color del texto */
 }
 
-/* Título de EDULIBRE */
-.header-title {
-    font-size: 3rem; /* Tamaño del texto */
-    font-weight: bold; /* Negrita */
-    text-align: center; /* Centrado */
-    color: #4a9e4a; /* Color verde */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
-    margin: 20px 0; /* Espacio vertical alrededor */
-    font-family: 'Arial', sans-serif; /* Tipografía */
-    letter-spacing: 1px; /* Espaciado entre letras */
-}
-
 /* Sección del Hero */
 .hero-section {
     display: flex;
