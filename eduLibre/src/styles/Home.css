@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center; /* Para alinear verticalmente emojis y texto */
+    max-width: 900px; /* Control del ancho máximo del contenedor */
+  }
+  
+  .Emojis {
+    width: 200px;
+    margin-right: 40px; /* Añadimos un margen derecho para separar los emojis del texto */
+    align-self: flex-start; /* Para asegurarnos de que los emojis se alineen al principio */
+  }
+  
+  .hero-text {
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  .hero-text p {
+    font-size: 1.6rem; /* Aumento del tamaño del texto para hacerlo más visible */
+    font-weight: 500; /* Texto con un poco más de peso */
+    color: #2c3e50; /* Un tono profesional y agradable a la vista */
+    margin-bottom: 30px; /* Espacio para separar el texto del botón */
+    line-height: 1.4; /* Espaciado de línea cómodo */
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: flex-start; /* Alinea el botón a la izquierda */
+  }
+  
+  .hero-buttons .btn-primary {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-buttons .btn-primary:hover {
+    background-color: #218838;
+  }
+  
+  /* Benefits Section */
+  .benefits-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #e9f7ef;
+  }
+  
+  .benefit {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .benefit h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #2c6d2d;
+    font-weight: 700;
+  }
+  
+  .benefit p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .Emojis {
+      margin-right: 0;
+      margin-bottom: 20px;
+      align-self: center; /* En pantallas pequeñas, los emojis se centran */
+    }
+  
+    .benefits-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .benefit {
+      margin-bottom: 20px;
+    }
+  }
+  
