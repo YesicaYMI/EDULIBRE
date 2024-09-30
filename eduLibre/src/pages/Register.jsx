@@ -3,13 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-
+import bcrypt from 'bcryptjs';
 
 function Register() {
   const [cedula, setCedula] = useState('');
-  const [age, setAge] = useState('');
+  const [edad, setEdad] = useState('');
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rol, setRol] = useState('Estudiante');
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -24,11 +26,29 @@ function Register() {
       return;
     }
 
-    if (isNaN(age) || age <= 0) {
+    if (isNaN(edad) || edad <= 0) {
       Swal.fire({
         icon: 'error',
         title: 'Error',
         text: 'Por favor ingrese una edad válida.',
+      });
+      return;
+    }
+
+    if (nombre.trim() === '') {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor ingrese un nombre válido.',
+      });
+      return;
+    }
+
+    if (!email.includes('@')) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor ingrese un correo electrónico válido.',
       });
       return;
     }
@@ -43,10 +63,12 @@ function Register() {
     }
 
     try {
+      const hashedPassword = await bcrypt.hash(password, 10);
+
       const response = await fetch('URL_DEL_BACKEND', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cedula, age, password }),
+        body: JSON.stringify({ cedula, nombre, email, contraseñaHash: hashedPassword, rol}),
       });
 
       const data = await response.json();
@@ -57,24 +79,7 @@ function Register() {
           title: 'Registro exitoso',
           text: '¡Bienvenido a EduLibre!',
         }).then(() => {
-          Swal.fire({
-            title: 'Vamos a escoger',
-            html: `
-              <div style="display: flex; justify-content: space-around;">
-                <button id="materias" class="swal2-confirm swal2-styled" style="background-color: green;">Por Materias</button>
-                <button id="grados" class="swal2-confirm swal2-styled" style="background-color: green;">Por Grados</button>
-              </div>
-            `,
-            showConfirmButton: false,
-            didOpen: () => {
-              document.getElementById('materias').addEventListener('click', () => {
-                navigate('/materias');
-              });
-              document.getElementById('grados').addEventListener('click', () => {
-                navigate('/grados');
-              });
-            }
-          });
+          navigate('/selection');
         });
       } else {
         Swal.fire({
@@ -99,44 +104,69 @@ function Register() {
 
   return (
     <>
-    <div className="register-page">
-      <Header />
-      <h1>Regístrese para comenzar a aprender</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <label>Número de Cédula:</label>
-          <input 
-            type="text" 
-            value={cedula} 
-            onChange={(e) => setCedula(e.target.value)} 
-            required 
-          />
-        </div>
-        <div className="input-group">
-          <label>Edad:</label>
-          <input 
-            type="number" 
-            value={age} 
-            onChange={(e) => setAge(e.target.value)} 
-            required 
-          />
-        </div>
-        <div className="input-group">
-          <label>Contraseña:</label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-          />
-        </div>
-        <button type="submit" className="register-button">Regístrese aquí</button>
-      </form>
-      <p className="login-link">
-        ¿Ya tiene cuenta? <span onClick={handleLoginRedirect} className="login-link-text">Iniciar Sesión</span>
-      </p>
-    </div>
-    <Footer/>
+      <div className="register-page">
+        <Header />
+        <h1>Regístrese para comenzar a aprender</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label>Número de Cédula:</label>
+            <input 
+              type="text" 
+              value={cedula} 
+              onChange={(e) => setCedula(e.target.value)} 
+              required 
+            />
+          </div>
+          <div className="input-group">
+            <label>Nombre:</label>
+            <input 
+              type="text" 
+              value={nombre} 
+              onChange={(e) => setNombre(e.target.value)} 
+              required 
+            />
+          </div>
+          <div className="input-group">
+            <label>Email:</label>
+            <input 
+              type="email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              required 
+            />
+          </div>
+          <div className="input-group">
+            <label>Edad:</label>
+            <input 
+              type="number" 
+              value={edad} 
+              onChange={(e) => setEdad(e.target.value)} 
+              required 
+            />
+          </div>
+          <div className="input-group">
+            <label>Contraseña:</label>
+            <input 
+              type="password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              required 
+            />
+          </div>
+          <div className="input-group">
+            <label>Rol:</label>
+            <select value={rol} onChange={(e) => setRol(e.target.value)} required>
+              <option value="Estudiante">Estudiante</option>
+              <option value="Administrador">Administrador</option>
+            </select>
+          </div>
+          <button type="submit" className="register-button">Regístrese aquí</button>
+        </form>
+        <p className="login-link">
+          ¿Ya tiene cuenta? <span onClick={handleLoginRedirect} className="login-link-text">Iniciar Sesión</span>
+        </p>
+      </div>
+      <Footer />
     </>
   );
 }
