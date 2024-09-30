@@ -133,7 +133,11 @@ function Register() {
               type="email" 
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
+<<<<<<< Updated upstream
               placeholder="Ingrese su correo electrónico" 
+=======
+              placeholder="Ingrese su correo electrónico"
+>>>>>>> Stashed changes
               required 
             />
           </div>
@@ -153,7 +157,11 @@ function Register() {
               type="password" 
               value={password} 
               onChange={(e) => setPassword(e.target.value)} 
+<<<<<<< Updated upstream
               placeholder="Ingrese su contraseña"
+=======
+              placeholder="Ingrese su contraseña" 
+>>>>>>> Stashed changes
               required 
             />
           </div>
