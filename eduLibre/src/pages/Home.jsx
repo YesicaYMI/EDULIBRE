@@ -5,9 +5,12 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '../styles/Home.css'
 
+
 const HeroSection = () => (
+  
   <section className="hero-section">
     <div className="hero-content">
+    <h1 className="header-title">EduLibre</h1>
       <img src={Emojis} alt="Emojis" className="Emojis" />
       <div className="hero-text">
         <p>Completa tu bachillerato de forma divertida, efectiva y sin costo.</p>
