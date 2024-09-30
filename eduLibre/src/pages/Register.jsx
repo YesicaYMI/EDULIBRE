@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import bcrypt from 'bcryptjs';
 
 function Register() {
   const [cedula, setCedula] = useState('');

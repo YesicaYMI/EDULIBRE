@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Emojis from '../images/Emojis.svg';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '../styles/Home.css'
+import '../styles/Home.css';
 
 const HeroSection = () => (
   <section className="hero-section">
@@ -18,7 +18,6 @@ const HeroSection = () => (
     </div>
   </section>
 );
-
 
 const BenefitsSection = () => (
   <section className="benefits-section">
