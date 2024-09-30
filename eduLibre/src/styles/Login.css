@@ -105,4 +105,19 @@ body {
   .register-button:hover {
     background-color: #1b5e20;
   }
-  
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.forgot-password-link {
+    color: #000000; /* Color del hipervínculo */
+    cursor: pointer;
+    text-decoration: underline; /* Subrayado para indicar que es un hipervínculo */
+}
+
+.forgot-password-link:hover {
+    color: #008cff27; /* Color del hipervínculo al pasar el cursor */
+}

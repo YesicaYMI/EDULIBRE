@@ -3,10 +3,14 @@
     font-family: 'Amiki', sans-serif;
 }
 
+<<<<<<< HEAD
 .section{
     display: flex;
 
 }
+=======
+/* Sección del Hero */
+>>>>>>> 6889e6ce143a75420babdc1c29a5d0c0636f8f9e
 .hero-section {
     display: flex;
     flex-direction: column;

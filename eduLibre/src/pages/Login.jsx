@@ -68,6 +68,10 @@ function Login() {
         navigate('/register');
     };
 
+    const handleForgotPasswordRedirect = () => {
+        navigate('/forgot-password'); // Asegúrate de que esta ruta esté definida en tu enrutador
+    };
+
     return (
         <>
         <div className="login-page">
@@ -95,13 +99,17 @@ function Login() {
                 </div>
                 <button type="submit" className="login-button">Continue aquí</button>
             </form>
+            <p className="forgot-password">
+                <span onClick={handleForgotPasswordRedirect} className="forgot-password-link">
+                    ¿Olvidaste tu contraseña?
+                </span>
+            </p>
             <p className="register-link">
                 ¿Aún no tiene cuenta?{' '}
                 <span onClick={handleRegisterRedirect} className="register-button">
                     Regístrese aquí
                 </span>
             </p>
-            {}
         </div>
         <Footer/>
         </>

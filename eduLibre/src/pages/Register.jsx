@@ -67,7 +67,7 @@ function Register() {
       const response = await fetch('URL_DEL_BACKEND', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cedula, nombre, email, contraseñaHash: hashedPassword, rol}),
+        body: JSON.stringify({ cedula, nombre, email, contraseñaHash: hashedPassword, rol }),
       });
 
       const data = await response.json();
@@ -113,8 +113,9 @@ function Register() {
               type="text" 
               value={cedula} 
               onChange={(e) => setCedula(e.target.value)} 
+              placeholder="Ingrese su cédula" 
               required 
-            />
+            />           
           </div>
           <div className="input-group">
             <label>Nombre:</label>
@@ -122,6 +123,7 @@ function Register() {
               type="text" 
               value={nombre} 
               onChange={(e) => setNombre(e.target.value)} 
+              placeholder="Ingrese su nombre" 
               required 
             />
           </div>
@@ -131,6 +133,7 @@ function Register() {
               type="email" 
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
+              placeholder="Ingrese su correo electrónico" 
               required 
             />
           </div>
@@ -140,6 +143,7 @@ function Register() {
               type="number" 
               value={edad} 
               onChange={(e) => setEdad(e.target.value)} 
+              placeholder="Ingrese su edad" 
               required 
             />
           </div>
@@ -149,6 +153,7 @@ function Register() {
               type="password" 
               value={password} 
               onChange={(e) => setPassword(e.target.value)} 
+              placeholder="Ingrese su contraseña"
               required 
             />
           </div>
