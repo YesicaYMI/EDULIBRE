@@ -1,210 +1,62 @@
-/* Estilos Generales */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Poppins', sans-serif; /* Tipografía moderna y limpia */
-    background-color: #f7f7f7; /* Color de fondo */
-    color: #333; /* Color del texto */
+.home-page{
+    background-color: #ffff;
+    font-family: 'Amiki', sans-serif;
 }
 
-/* Título de EDULIBRE */
-.header-title {
-    font-size: 3rem; /* Tamaño del texto */
-    font-weight: bold; /* Negrita */
-    text-align: center; /* Centrado */
-    color: #4a9e4a; /* Color verde */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
-    margin: 20px 0; /* Espacio vertical alrededor */
-    font-family: 'Arial', sans-serif; /* Tipografía */
-    letter-spacing: 1px; /* Espaciado entre letras */
-}
+.section{
+    display: flex;
 
-/* Sección del Hero */
+}
 .hero-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Altura mínima del 100% de la ventana */
-    width: 100vw; /* Asegura que la sección cubra todo el ancho de la ventana */
-    background-color: #fff; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
-    flex-direction: column; /* Cambia a columna para mejor disposición */
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro para la sección */
 }
 
-/* Contenido del Hero */
 .hero-content {
     display: flex;
-    align-items: center; /* Para alinear verticalmente emojis y texto */
-    max-width: 900px; /* Control del ancho máximo del contenedor */
-    flex-direction: column; /* Cambia a columna para mejor disposición */
-    text-align: center; /* Centra el texto */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
 }
 
-/* Estilo de Emojis */
 .Emojis {
-    width: 200px; /* Tamaño de los emojis */
-    margin: 20px 0; /* Espacio vertical alrededor de los emojis */
+    width: 40%; /* Ajusta el ancho según sea necesario */
+    max-width: 400px;
+    margin: 20px 0;
 }
 
-/* Texto del Hero */
 .hero-text {
-    text-align: center; /* Alinea el texto al centro */
+    width: 60%; /* Ajusta el ancho según sea necesario */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
 
 .hero-text p {
-    font-size: 1.6rem; /* Tamaño del texto */
-    font-weight: 500; /* Peso del texto */
-    color: #2c3e50; /* Un tono profesional y agradable a la vista */
-    margin-bottom: 30px; /* Espacio para separar el texto del botón */
-    line-height: 1.4; /* Espaciado de línea cómodo */
-}
-
-/* Botones del Hero */
-.hero-buttons {
-    display: flex;
-    justify-content: center; /* Alinea el botón al centro */
+    font-size: 1.5rem;
+    color: #666;
+    margin: 20px 0;
 }
 
 .hero-buttons .btn-primary {
-    background-color: #28a745; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    padding: 15px 30px; /* Espaciado interno del botón */
-    border-radius: 8px; /* Bordes redondeados */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 18px; /* Tamaño del texto del botón */
-    font-weight: 600; /* Peso del texto */
-    letter-spacing: 0.5px; /* Espaciado entre letras */
-    transition: background-color 0.3s ease; /* Efecto de transición */
+    padding: 10px 20px;
+    background-color: #28a745; /* Verde oscuro para el botón */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .hero-buttons .btn-primary:hover {
-    background-color: #218838; /* Color de fondo al pasar el cursor */
-}
-
-/* Sección de Beneficios */
-.benefits-section {
-    display: grid; /* Uso de cuadrícula */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colocación automática de columnas */
-    gap: 40px; /* Espacio entre los elementos */
-    justify-content: center; /* Alinea los beneficios al centro */
-    align-items: center; /* Alinea los beneficios verticalmente */
-    padding: 60px 20px; /* Espaciado interno */
-    background-color: #d2f6d2; /* Color de fondo */
-}
-
-/* Estilo de cada Beneficio */
-.benefit {
-    background-color: rgba(255, 255, 255, 0.6); /* Fondo translúcido */
-    border: 2px solid rgba(0, 0, 0, 0.2); /* Borde suave */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-radius: 10px; /* Bordes redondeados */
-    transition: transform 0.3s ease-in-out; /* Efecto de transición */
-}
-
-.benefit:hover {
-    transform: scale(1.05); /* Efecto al pasar el cursor por encima */
-}
-
-.benefit h2 {
-    font-size: 1.4rem; /* Tamaño del título del beneficio */
-    margin-bottom: 10px; /* Espacio debajo del título */
-    color: #2c6d2d; /* Color del texto */
-    font-weight: 700; /* Peso del texto */
-}
-
-.benefit p {
-    font-size: 1rem; /* Tamaño del texto */
-    color: #555; /* Color del texto */
-    line-height: 1.6; /* Espaciado de línea cómodo */
-}
-
-/* Media Queries para Diseño Responsive */
-
-/* Estilo para iPhone 12 Pro (390x844) */
-@media (max-width: 390px) {
-    .header-title {
-        font-size: 2.5rem; /* Tamaño del título */
-    }
-
-    .hero-text p {
-        font-size: 1.2rem; /* Tamaño del texto */
-    }
-
-    .hero-buttons .btn-primary {
-        font-size: 16px; /* Tamaño del botón */
-    }
-
-    .Emojis {
-        width: 150px; /* Reduce el tamaño de los emojis */
-    }
-}
-
-/* Estilo para iPad (768x1024) */
-@media (max-width: 768px) {
-    .header-title {
-        font-size: 2.5rem; /* Tamaño del título */
-    }
-
-    .hero-text p {
-        font-size: 1.4rem; /* Tamaño del texto */
-    }
-
-    .hero-buttons .btn-primary {
-        font-size: 16px; /* Tamaño del botón */
-    }
-
-    .benefits-section {
-        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas */
-    }
-
-    .benefit {
-        margin-bottom: 20px; /* Espacio entre beneficios */
-    }
-
-    .Emojis {
-        width: 180px; /* Tamaño de los emojis */
-    }
-}
-
-/* Estilo para MacBook Pro (1440x900) */
-@media (max-width: 1440px) {
-    .header-title {
-        font-size: 2.8rem; /* Tamaño del título */
-    }
-
-    .hero-text p {
-        font-size: 1.6rem; /* Tamaño del texto */
-    }
-
-    .hero-buttons .btn-primary {
-        font-size: 18px; /* Tamaño del botón */
-    }
-
-    .benefits-section {
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas más grandes */
-    }
-}
-
-/* Estilos para Pantallas Más Pequeñas */
-@media (max-width: 576px) {
-    .header-title {
-        font-size: 2rem; /* Tamaño del título más pequeño */
-    }
-
-    .hero-text p {
-        font-size: 1rem; /* Tamaño del texto aún más pequeño */
-    }
-
-    .hero-buttons .btn-primary {
-        font-size: 14px; /* Tamaño del botón más pequeño */
-    }
-
-    .Emojis {
-        width: 150px; /* Reduce el tamaño de los emojis aún más */
-    }
+    background-color: #218838;
 }
