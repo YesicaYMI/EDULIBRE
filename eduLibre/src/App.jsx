@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import SelectionMenu from './components/SelectionMenu';
 import MateriasMenu from './components/MateriasMenu';
 import GradosMenu from './components/GradosMenu';
+import ForgotPasswordPage from './pages/ForgotPassword';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/selection" element={<SelectionMenu />} />
           <Route path="/materias" element={<MateriasMenu />} />
           <Route path="/grados" element={<GradosMenu />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
         </Routes>  
   )
