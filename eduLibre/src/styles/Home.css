@@ -1,25 +1,33 @@
-.home-page{
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.home-page {
     background-color: #ffff;
     font-family: 'Amiki', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
-<<<<<<< HEAD
-.section{
-    display: flex;
-
-}
-=======
-/* Sección del Hero */
->>>>>>> 6889e6ce143a75420babdc1c29a5d0c0636f8f9e
+/* Sección de Héroe */
 .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 40px;
-    width: 100%;
-    padding: 20px;
-    background-color: #f9f9f9; /* Fondo claro para la sección */
+    width: 100vw; /* Ancho total de la ventana */
+    height: 100vh; /* Alto total de la ventana */
+    background-color: #f9f9f9;
+    justify-content: center; /* Centrar el contenido verticalmente */
 }
 
 .hero-content {
@@ -28,18 +36,18 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+    max-width: 1200px;
 }
 
 .Emojis {
-    width: 40%; /* Ajusta el ancho según sea necesario */
+    width: 40%;
     max-width: 400px;
-    margin: 20px 0;
+    height: auto;
 }
 
 .hero-text {
-    width: 60%; /* Ajusta el ancho según sea necesario */
-    text-align: left; /* Alinea el texto a la izquierda */
+    width: 60%;
+    text-align: left;
 }
 
 .hero-text p {
@@ -50,7 +58,7 @@
 
 .hero-buttons .btn-primary {
     padding: 10px 20px;
-    background-color: #28a745; /* Verde oscuro para el botón */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 8px;
@@ -63,4 +71,46 @@
 
 .hero-buttons .btn-primary:hover {
     background-color: #218838;
+}
+
+/* Sección de Beneficios */
+.benefits-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: 1fr 1fr;    /* Dos filas */
+    gap: 60px 120px; /* Más espacio entre filas (60px) y columnas (120px) */
+    justify-content: center;
+    align-items: center;
+    padding: 60px; /* Aumentamos el padding general de la sección */
+    background-color: #d6f9d0; /* Fondo verde claro */
+}
+
+/* Estilo para cada caja de beneficio */
+.benefit {
+    background-color: #e0ffe0; /* Fondo más claro para los cuadros */
+    border: 2px solid #8bc34a; /* Borde verde */
+    padding: 30px; /* Aumentamos el padding dentro de cada caja */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Ancho máximo de las cajas */
+    margin: auto;
+}
+
+.benefit h2 {
+    color: #4a7c4a; /* Verde oscuro para los títulos */
+    font-size: 1.4rem;
+    margin-bottom: 15px; /* Más espacio entre título y párrafo */
+}
+
+.benefit p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Para el beneficio central (Estudia a tu Ritmo), lo centramos en la cuadrícula */
+.benefits-section .benefit:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2; /* Ocupa dos filas */
+    align-self: center; /* Centra verticalmente */
 }

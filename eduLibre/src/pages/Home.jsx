@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import Emojis from '../images/Emojis.svg';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import LogoLogin from '../images/LogoLogin.svg';
 import '../styles/Home.css';
+import '../styles/Header.css';
+import '../styles/Footer.css';
 
 function Home() {
     return (
