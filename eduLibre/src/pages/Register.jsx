@@ -45,7 +45,7 @@ export default function Register() {
     }
 
     try {
-      // Simulated API call - replace URL_DEL_BACKEND with your actual backend URL
+     
       const response = await fetch('URL_DEL_BACKEND', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
