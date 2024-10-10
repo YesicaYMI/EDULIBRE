@@ -67,10 +67,19 @@ body {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
   }
   
   .login-button:hover {
     background-color: #218838;
+    transform: translate(-10px);
+    background-color: var(--clr-accent);
+    color: var(--clr-accent)
   }
   
   .register-link {
@@ -86,10 +95,19 @@ body {
     border-radius: 8px;
     cursor: pointer;
     display: inline-block;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
   }
   
   .register-button:hover {
     background-color: #1b5e20;
+    transform: translate(-10px);
+    background-color: var(--clr-accent);
+    color: var(--clr-accent)
   }
   
   /* Estilo para el botón de registro */
