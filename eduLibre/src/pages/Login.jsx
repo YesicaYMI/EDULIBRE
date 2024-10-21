@@ -69,7 +69,7 @@ function Login() {
     };
 
     const handleForgotPasswordRedirect = () => {
-        navigate('/forgot-password'); // Asegúrate de que esta ruta esté definida en tu enrutador
+        navigate('/forgot-password'); 
     };
 
     return (
@@ -77,7 +77,7 @@ function Login() {
         <div className="login-page">
             <Header />
             <img src={LogoLogin} alt="Emojis" className="Emojis" />
-            <h1>¿Ya está aprendiendo con nosotros?</h1>
+            <span class="highlight">¿Ya estas aprendiendo con nosotros?</span>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <input

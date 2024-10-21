@@ -186,11 +186,13 @@ export default function Register() {
             </select>
             
             <div className="action-container">
-              <button type="submit">Regístrese aquí</button>
+              <button type="submit"> Regístrar</button>
               <a href="#" onClick={() => navigate('/login')} className="login-link">
-                ¿Ya tiene cuenta? Iniciar Sesión
+                <button type='submit'>Iniciar Sesión</button>
+                
               </a>
             </div>
+            <p className='texto'>¿Ya tiene cuenta? </p>
           </form>
         </div>
         
