@@ -15,8 +15,27 @@
     font-style: normal;
     font-weight: 700;
     font-size: 29.125px;
-    line-height: 39px;
     color: #2E7D32;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(48, 40, 40, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.footer p:hover{
+    transform: translate(-15px);
+    background-color: var(--clr-accent);
+    color: var(--clr-accent)
 }

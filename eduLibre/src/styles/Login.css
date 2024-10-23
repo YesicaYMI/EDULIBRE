@@ -71,6 +71,7 @@ body {
     text-align: center;
     font-size: 1rem;
     color: #333;
+    border-radius: 40px;
   }
   
   .input-group input::placeholder {
@@ -88,12 +89,21 @@ body {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(194, 6, 6, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     transition: background-color 0.3s;
     color: var(.4216ZM24);
     background-color: var(#4CAF50);
     border: 10px solid var(#424242);
     border-radius: 5px;
     transition: transform 0.3s;
+    border-radius: 40px;
   }
   
   .login-button:hover {
@@ -131,6 +141,7 @@ body {
     border: 10px solid var(#424242);
     border-radius: 5px;
     transition: transform 0.3s;
+
   }
   
   .register-button:hover {
@@ -148,6 +159,7 @@ body {
     border-radius: 8px;
     font-size: 0.9rem;
     cursor: pointer;
+    border-radius: 40px;
   }
   
   .register-button:hover {
@@ -158,10 +170,24 @@ body {
     text-align: center;
     margin-top: 10px;
     font-size: 0.9rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(168, 166, 166, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
 .forgot-password-link {
-    color: #000000; /* Color del hipervínculo */
+    color: #615e5e; /* Color del hipervínculo */
     cursor: pointer;
     text-decoration: underline; /* Subrayado para indicar que es un hipervínculo */
 }

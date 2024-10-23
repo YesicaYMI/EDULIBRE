@@ -16,7 +16,9 @@ html, body {
     font-family: 'Amiki', sans-serif;
     height: 100%;
     width: 100%;
+    
 }
+
 
 /* Sección de Héroe */
 .hero-section {
@@ -48,18 +50,39 @@ html, body {
 .hero-text {
     width: 60%;
     text-align: left;
+   
 }
 
 .hero-text p {
     font-size: 1.5rem;
     color: #666;
     margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(48, 40, 40, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.hero-text p:hover{
+    transform: translate(-15px);
+    background-color: var(--clr-accent);
+    color: var(--clr-accent)
 }
 
 .hero-buttons .btn-primary {
     padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+    background-color: #718375;
+    color: #63d57d;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -67,10 +90,28 @@ html, body {
     text-decoration: none;
     text-align: center;
     margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(48, 40, 40, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
+    border-radius: 60px;
 }
 
 .hero-buttons .btn-primary:hover {
     background-color: #218838;
+    transform: translate(-15px);
+    background-color: var(--clr-accent);
+    color: var(--clr-accent)
 }
 
 /* Sección de Beneficios */
@@ -83,6 +124,21 @@ html, body {
     align-items: center;
     padding: 60px; /* Aumentamos el padding general de la sección */
     background-color: #d6f9d0; /* Fondo verde claro */
+    display: flex;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(48, 40, 40, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
 /* Estilo para cada caja de beneficio */
@@ -95,6 +151,27 @@ html, body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 300px; /* Ancho máximo de las cajas */
     margin: auto;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(48, 40, 40, 0.3);
+    animation-name: slideInleft;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    transition: background-color 0.3s;
+    color: var(.4216ZM24);
+    background-color: var(#4CAF50);
+    border: 10px solid var(#424242);
+    border-radius: 5px;
+    transition: transform 0.7s;
+    border-radius: 50px;
+}
+.benefit:hover{
+    background-color: #218838;
+    transform: translate(-15px);
+    background-color: var(--clr-accent);
+    color: var(--clr-accent)
 }
 
 .benefit h2 {
