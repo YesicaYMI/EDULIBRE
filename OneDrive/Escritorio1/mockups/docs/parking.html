@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parqueo | J&Y Park</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="inner">
+    <div class="brand"><div class="logo"></div> J&Y Park</div>
+    <nav class="nav">
+      <a href="home.html">Inicio</a>
+      <a href="parking.html">Parqueo</a>
+      <a href="schedules.html">Horarios</a>
+      <a href="users.html">Usuarios</a>
+      <a href="settings.html">Configuración</a>
+      <a href="login.html">Salir</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h1 class="page-title">Parqueo</h1>
+    <p class="subtitle">Registra entradas, salidas y pagos.</p>
+
+    <div class="grid">
+      <div id="ingreso" class="card col-6">
+        <h3>Registrar ingreso</h3>
+        <form class="form" action="parking.html" method="get">
+          <div class="form-row">
+            <div>
+              <label class="label">Placa</label>
+              <input class="input" name="placa" placeholder="ABC123" required />
+            </div>
+            <div>
+              <label class="label">Tipo de vehículo</label>
+              <select name="tipo">
+                <option>Automóvil</option>
+                <option>Moto</option>
+                <option>Camioneta</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="label">Fecha & hora de ingreso</label>
+              <input class="input" type="datetime-local" name="ingreso_dt" required />
+            </div>
+            <div>
+              <label class="label">Cupo</label>
+              <input class="input" name="cupo" placeholder="P12" />
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn primary" type="submit">Registrar</button>
+            <a class="btn" href="home.html">Volver</a>
+          </div>
+        </form>
+      </div>
+
+      <div id="pago" class="card col-6">
+        <h3>Pagar / Registrar salida</h3>
+        <form class="form" action="parking.html" method="get">
+          <div class="form-row">
+            <div>
+              <label class="label">Placa</label>
+              <input class="input" name="placa_pago" placeholder="ABC123" required />
+            </div>
+            <div>
+              <label class="label">Fecha & hora de salida</label>
+              <input class="input" type="datetime-local" name="salida_dt" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="label">Tarifa aplicada</label>
+              <select name="tarifa">
+                <option>Hora estándar</option>
+                <option>Noche</option>
+                <option>Día completo</option>
+              </select>
+            </div>
+            <div>
+              <label class="label">Descuento (%)</label>
+              <input class="input" type="number" name="descuento" min="0" max="100" step="1" value="0" />
+            </div>
+          </div>
+          <div>
+            <span class="help">Nota: Este demo no calcula valores automáticamente (sin JS).</span>
+          </div>
+          <div class="btns">
+            <button class="btn accent" type="submit">Marcar como pagado</button>
+            <a class="btn" href="home.html">Volver</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card col-12">
+        <h3>Últimos movimientos</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Fecha</th><th>Placa</th><th>Movimiento</th><th>Tipo</th><th>Usuario</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2025-08-22 08:12</td><td>ABC123</td><td>Ingreso</td><td>Automóvil</td><td>operador1</td></tr>
+            <tr><td>2025-08-22 08:30</td><td>XYZ789</td><td>Salida</td><td>Moto</td><td>operador2</td></tr>
+            <tr><td>2025-08-22 09:05</td><td>JKL456</td><td>Pago</td><td>Automóvil</td><td>cajero1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <div class="footer">© 2025 J&Y Park</div>
+</body>
+</html>

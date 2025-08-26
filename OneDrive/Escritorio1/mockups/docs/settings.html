@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Configuración | J&Y Park</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="inner">
+    <div class="brand"><div class="logo"></div> J&Y Park</div>
+    <nav class="nav">
+      <a href="home.html">Inicio</a>
+      <a href="parking.html">Parqueo</a>
+      <a href="schedules.html">Horarios</a>
+      <a href="users.html">Usuarios</a>
+      <a href="settings.html">Configuración</a>
+      <a href="login.html">Salir</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h1 class="page-title">Configuración</h1>
+    <p class="subtitle">Preferencias del sistema y datos del negocio.</p>
+
+    <div class="grid">
+      <div class="card col-6">
+        <h3>Datos del negocio</h3>
+        <form class="form" action="settings.html" method="get">
+          <div>
+            <label class="label">Nombre del parqueadero</label>
+            <input class="input" name="nombre_negocio" placeholder="Parqueadero Centro" />
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="label">NIT</label>
+              <input class="input" name="nit" placeholder="900.123.456-7" />
+            </div>
+            <div>
+              <label class="label">Teléfono</label>
+              <input class="input" name="telefono" placeholder="+57 300 000 0000" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="label">Dirección</label>
+              <input class="input" name="direccion" placeholder="Calle 123 #45-67" />
+            </div>
+            <div>
+              <label class="label">Ciudad</label>
+              <input class="input" name="ciudad" placeholder="Bogotá" />
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn primary" type="submit">Guardar</button>
+            <a class="btn" href="home.html">Volver</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card col-6">
+        <h3>Preferencias</h3>
+        <form class="form" action="settings.html" method="get">
+          <div>
+            <label class="label">Tema</label>
+            <select name="tema">
+              <option>Oscuro</option>
+              <option>Claro</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Impresión de ticket</label>
+            <div class="btns">
+              <label><input type="checkbox" /> Impresión automática</label>
+              <label><input type="checkbox" checked /> Mostrar vista previa</label>
+            </div>
+          </div>
+          <div>
+            <label class="label">Moneda</label>
+            <select name="moneda">
+              <option value="COP" selected>COP (Colombia)</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+          <div class="btns">
+            <button class="btn" type="submit">Aplicar</button>
+          </div>
+          <div class="help">Las opciones son demostrativas; sin persistencia.</div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div class="footer">© 2025 J&Y Park</div>
+</body>
+</html>

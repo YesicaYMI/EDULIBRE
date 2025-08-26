@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horarios | J&Y Park</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="inner">
+    <div class="brand"><div class="logo"></div> J&Y Park</div>
+    <nav class="nav">
+      <a href="home.html">Inicio</a>
+      <a href="parking.html">Parqueo</a>
+      <a href="schedules.html">Horarios</a>
+      <a href="users.html">Usuarios</a>
+      <a href="settings.html">Configuración</a>
+      <a href="login.html">Salir</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h1 class="page-title">Horarios & Tarifas</h1>
+    <p class="subtitle">Define turnos, días hábiles y costos base.</p>
+
+    <div class="grid">
+      <div class="card col-6">
+        <h3>Crear horario</h3>
+        <form class="form" action="schedules.html" method="get">
+          <div class="form-row">
+            <div>
+              <label class="label">Nombre del turno</label>
+              <input class="input" name="turno" placeholder="Mañana / Tarde / Noche" required />
+            </div>
+            <div>
+              <label class="label">Días</label>
+              <select name="dias">
+                <option>Lunes a Viernes</option>
+                <option>Lunes a Sábado</option>
+                <option>Todos los días</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="label">Desde</label>
+              <input class="input" type="time" name="desde" required />
+            </div>
+            <div>
+              <label class="label">Hasta</label>
+              <input class="input" type="time" name="hasta" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="label">Tarifa por hora (COP)</label>
+              <input class="input" type="number" name="tarifa" placeholder="3500" min="0" step="100" required />
+            </div>
+            <div>
+              <label class="label">Tarifa día completo (COP)</label>
+              <input class="input" type="number" name="tarifa_dia" placeholder="18000" min="0" step="100" />
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn primary" type="submit">Guardar</button>
+            <a class="btn" href="home.html">Volver</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card col-6">
+        <h3>Horarios vigentes</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Turno</th><th>Días</th><th>Horario</th><th>Tarifa/Hora</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mañana</td><td>L-V</td><td>06:00–14:00</td><td>$3.500</td></tr>
+            <tr><td>Tarde</td><td>L-V</td><td>14:00–22:00</td><td>$3.800</td></tr>
+            <tr><td>Noche</td><td>Todos</td><td>22:00–06:00</td><td>$4.200</td></tr>
+          </tbody>
+        </table>
+        <div class="help" style="margin-top:10px;">Ejemplo visual; sin cálculo automático.</div>
+      </div>
+    </div>
+  </main>
+  <div class="footer">© 2025 J&Y Park</div>
+</body>
+</html>
